@@ -12,21 +12,20 @@ var maxDrops=100;
 var thunderCreatedFrame=0;
 
 function preload(){
-man = loadAnimation("images/Walking Frame/_1.png","images/Walking Frame/_2.png","images/Walking Frame/_3.png","images/Walking Frame/_4.png","images/Walking Frame/_5.png","images/Walking Frame/_6.png","images/Walking Frame/_7.png","images/Walking Frame/_8.png");
-thunder1 = loadImage("images/thunderbolt/1.png");
-thunder2 = loadImage("images/thunderbolt/2.png");
-thunder3 = loadImage("images/thunderbolt/3.png");
-thunder4 = loadImage("images/thunderbolt/4.png");
-    
+    thunder1 = loadImage("1.png");
+    thunder2 = loadImage("2.png");
+    thunder3 = loadImage("3.png");
+    thunder4 = loadImage("4.png");
 }
 
 function setup(){
     engine = Engine.create();
     world = engine.world;
 
-    createCanvas(400,700);
+    createCanvas(500,700);
     umbrella = new Umbrella(200,500);
 
+    //creating drops
     if(frameCount % 150 === 0){
 
         for(var i=0; i<maxDrops; i++){
@@ -73,6 +72,6 @@ function draw(){
         
     }
 
-    drawSprites(); 
+    drawSprites();
 }   
 
